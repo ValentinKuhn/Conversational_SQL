@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  database:
+    build:
+      context: Database/
+      dockerfile: Dockerfile
+    ports:
+      - "5432:5432"
+  llm:
+    build:
+      context: ./LLM
+    depends_on:
+      - database
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=postgresql://user:password@database:5432/example_posts
+  frontend:
+    build:
+      context: ./frontend
+    depends_on:
+      - llm
+    ports:
+      - "8050:8050"
