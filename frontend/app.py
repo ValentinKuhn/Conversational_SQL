@@ -10,17 +10,23 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div([
-    html.H1('Chat with the database'),
-    dcc.Input(id='input-box', type='text', placeholder='Type your SQL query here...'),
+    html.H1('Chat with the database', style={'textAlign': 'center'}),
+    dcc.Input(
+        id='input-box',
+        type='text',
+        placeholder='Type your SQL query here...',
+        style={'width': '100%', 'padding': '10px 15px', 'margin': '0 0 10px 0'}  # Added style here
+    ),
     dcc.Loading(
         id="loading",
         type="circle",
         children=[
-            html.Button('Send', id='button'),
-            html.Div(id='output-box', style={"height": "400px", "overflow": "auto"}, children=[])
+            html.Button('Send', id='button'),  # You can also adjust button style if needed
+            html.Div(id='output-box', style={"height": "400px", "overflow": "auto", "padding": "0 15px"}, children=[])
         ]
     )
 ])
+
 
 @app.callback(
     Output('output-box', 'children'),
