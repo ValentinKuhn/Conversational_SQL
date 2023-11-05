@@ -1,4 +1,4 @@
-# Chat with a SQL Database
+# Conversational SQL: The next step towards database accessibility with LLMs
 This project demonstrates a method to give a large language model (LLM) access to an SQL database using a proxy. For this demonstration, we have utilized the OpenAI Chat API as our backend.
 
 ## Configuration
