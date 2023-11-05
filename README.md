@@ -6,6 +6,8 @@ This project demonstrates a method to give a large language model (LLM) access t
 
 
 ## Components
+![LLM-Enhanced SQL Database Interaction Architecture](images/ConversationalSQL.png)
+
 This project consists of three main components:
 
 1. **Frontend**: Built with Plotly Dash, it serves as a user interface for querying the database.
