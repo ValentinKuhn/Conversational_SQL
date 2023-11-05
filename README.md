@@ -33,3 +33,6 @@ While this approach is promising, there are some known issues and areas for futu
 1. The LLM sometimes provides incorrect queries and therefor wrong answers. Further work is needed to enhance the accuracy of responses.
 2. The system currently requires manual input for the structure and content of the tables. Future versions should automatically read and comprehend this information.
 3. Comprehensive testing across different databases and large-scale data warehouses is necessary to validate the system's effectiveness in diverse environments.
+
+
+We welcome contributions and ideas to enhance this project!
