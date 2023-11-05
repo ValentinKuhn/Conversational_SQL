@@ -3,13 +3,13 @@ version: '3.7'
 services:
   database:
     build:
-      context: Database/
+      context: database
       dockerfile: Dockerfile
     ports:
       - "5432:5432"
-  llm:
+  gateway:
     build:
-      context: ./LLM
+      context: gateway
     depends_on:
       - database
     ports:
@@ -18,8 +18,8 @@ services:
       - DATABASE_URL=postgresql://user:password@database:5432/example_posts
   frontend:
     build:
-      context: ./frontend
+      context: frontend
     depends_on:
-      - llm
+      - gateway
     ports:
       - "8050:8050"

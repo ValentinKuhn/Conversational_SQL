@@ -32,7 +32,7 @@ def update_output(n_clicks, input_value, chat_history):
     if n_clicks is None or n_clicks == 0:
         return chat_history
     else:
-        response = requests.post('http://llm:5000/chat', json={'input': input_value})
+        response = requests.post('http://gateway:5000/chat', json={'input': input_value})
         reply = response.json().get('reply')
         formatted_reply = reply.replace('\n', '<br>')
         new_chat_history = chat_history + [
