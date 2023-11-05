@@ -2,7 +2,7 @@
 This project demonstrates a method to give a large language model (LLM) access to an SQL database using a proxy. For this demonstration, we have utilized the OpenAI Chat API as our backend.
 
 ## Configuration
-1. Create a `.env` file in the `LLM` folder and insert your OpenAI API key in the following format: ```OPENAI_API_KEY="xyz"```
+1. Create a `.env` file in the `gateway` folder and insert your OpenAI API key in the following format: ```OPENAI_API_KEY="xyz"```
 
 
 ## Components
@@ -14,7 +14,7 @@ This project consists of three main components:
 
 2. **Database**: A sample database mimicking a social media platform with three tables: `users`, `posts`, and `comments`.
 
-3. **LLM**: A Flask API that processes requests from the frontend and interacts with the OpenAI Chat backend to generate responses.
+3. **Gateway**: A Flask API that processes requests from the frontend and interacts with the OpenAI Chat backend to generate responses.
 
 ## Running the Project
 To run the project, follow these steps:
