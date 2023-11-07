@@ -1,13 +1,11 @@
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import html, dcc, Dash
 import requests
 from dash.dependencies import Input, Output, State
 from datetime import datetime
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div([
     html.H1('Chat with the database', style={'textAlign': 'center'}),
